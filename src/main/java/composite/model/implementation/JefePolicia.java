@@ -1,9 +1,11 @@
 package composite.model.implementation;
 
 import composite.interfaces.UnidadPolicial;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class JefePolicia implements UnidadPolicial {
@@ -21,5 +23,9 @@ public class JefePolicia implements UnidadPolicial {
     public void mostrarDetalles() {
          System.out.println("Policia: " + this.nombre + ", Rango: " + this.rango);
          subordinado.forEach(Policia::mostrarDetalles);
+    }
+
+    public void agregarSubordinado(Policia policia){
+        subordinado.add(policia);
     }
 }
