@@ -20,6 +20,14 @@ public class Smartphone implements Telefono {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
+
     public String getMarca() {
         return marca;
     }
