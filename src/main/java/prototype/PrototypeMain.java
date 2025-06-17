@@ -19,6 +19,5 @@ public class PrototypeMain {
 
         System.out.println("featurePhone2 = " + featurePhone2);
         System.out.println("featurePhone2 = " + featurePhone2);
-        
     }
 }

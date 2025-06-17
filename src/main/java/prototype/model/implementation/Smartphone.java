@@ -1,15 +1,16 @@
 package prototype.model.implementation;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import prototype.interfaces.Telefono;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Smartphone implements Telefono {
     private String marca;
     private String modelo;
-
-    public Smartphone(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
-    }
 
     @Override
     public Telefono clonar() {
@@ -18,29 +19,5 @@ public class Smartphone implements Telefono {
         }catch (CloneNotSupportedException e){
             return null;
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Smartphone{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                '}';
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
     }
 }
